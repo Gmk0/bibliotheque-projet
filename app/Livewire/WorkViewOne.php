@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Consultation;
 use App\Models\Work;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
@@ -17,6 +18,7 @@ class WorkViewOne extends Component
         if($condition)
         {
             $this->work= Work::where('matricule', '=', $matricule)->first();
+            $this->countView($this->work);
 
         }else{
             return redirect()->route('works');
@@ -28,5 +30,14 @@ class WorkViewOne extends Component
     public function render()
     {
         return view('livewire.work-view-one');
+    }
+
+    public function countView(Work $work){
+        $consultation=Consultation::create(['work_id' => $work->id,
+        'user_id' => auth()->id()]);
+
+        $work->viewCount +=1;
+        $work->update();
+
     }
 }

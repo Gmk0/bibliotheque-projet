@@ -45,6 +45,7 @@
         @stack('modals')
 
         @stack('script')
+        @livewire('notifications')
         @livewireScripts
         @filamentScripts
     </body>

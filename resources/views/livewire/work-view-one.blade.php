@@ -1,7 +1,7 @@
 <div>
 
     <div class="flex min-h-screen mx-auto">
-            <div class="w-full lg:w-1/2">
+            <div class="w-full p-4 lg:w-1/2">
                 <!-- Section d'affichage des informations du travail -->
                 <div class="p-4 bg-white border border-gray-200 rounded">
                     <h2 class="mb-4 text-2xl font-bold">Informations du travail</h2>
@@ -13,7 +13,7 @@
                     <p><strong>Description :</strong> {{ $work->description }}</p>
                 </div>
             </div>
-            <div class="w-full lg:w-1/2">
+            <div class="w-full p-4 lg:w-1/2">
                 <!-- Section de visualisation des fichiers PDF -->
                 <div class="p-4 bg-white">
                     <div id="viewer" style="width: 100%; height: 500px;"></div>

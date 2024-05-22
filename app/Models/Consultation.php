@@ -16,7 +16,7 @@ class Consultation extends Model
      */
     protected $fillable = [
         'user_id',
-        'travail_id',
+        'work_id',
     ];
 
     /**
@@ -27,7 +27,7 @@ class Consultation extends Model
     protected $casts = [
         'id' => 'integer',
         'user_id' => 'integer',
-        'travail_id' => 'integer',
+        'work_id' => 'integer',
     ];
 
     public function user(): BelongsTo

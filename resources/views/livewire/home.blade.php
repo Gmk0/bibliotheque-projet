@@ -104,7 +104,7 @@
                     <p class="mt-1 text-gray-600">{{$travail->domain->intitule}}</p>
                 </div>
                 <div class="px-4 py-2 text-center bg-gray-100">
-                    <a href="#" class="font-semibold text-blue-500">Voir</a>
+                    <a href="{{route('worksOne',[$travail->matricule])}}" class="font-semibold text-blue-500">Voir</a>
                 </div>
 
             </a>
@@ -123,5 +123,5 @@
     </section>
 
 
-    <x-footer />
+
 </div>
